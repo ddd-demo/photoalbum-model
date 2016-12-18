@@ -3,9 +3,14 @@ package com.fengtaiguang.photoalbum.domain.entity;
 import java.io.Serializable;
 import java.sql.Timestamp;
 
-import com.fengtaiguang.ddd.framwork.domain.aggregate.AggregateRootBase;
+import org.springframework.beans.factory.config.ConfigurableBeanFactory;
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Service;
 
-public abstract class Album extends AggregateRootBase<Album> implements Serializable {
+import com.fengtaiguang.ddd.framwork.domain.aggregate.AggregateRootBase;
+@Service("album")
+@Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE)
+public  class Album extends AggregateRootBase<Album> implements Serializable {
 
 	protected String id;
 	protected String name;
@@ -62,6 +67,6 @@ public abstract class Album extends AggregateRootBase<Album> implements Serializ
 		this.userId = userId;
 	}
 
-	public abstract void fei();
+
 	
 }

@@ -38,5 +38,10 @@ public class AlbumDto  implements IDto{
 	public void setUserId(String userId) {
 		this.userId = userId;
 	}
+	@Override
+	public String toString() {
+		return "AlbumDto [id=" + id + ", name=" + name + ", description=" + description + ", number=" + number
+				+ ", userId=" + userId + "]";
+	}
 
 }
