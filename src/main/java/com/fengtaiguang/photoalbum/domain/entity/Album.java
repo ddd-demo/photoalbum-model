@@ -67,6 +67,12 @@ public  class Album extends AggregateRootBase<Album> implements Serializable {
 		this.userId = userId;
 	}
 
+	@Override
+	public String toString() {
+		return "Album [id=" + id + ", name=" + name + ", description=" + description + ", number=" + number
+				+ ", createDate=" + createDate + ", userId=" + userId + "]";
+	}
+
 
 	
 }
